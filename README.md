@@ -2,6 +2,28 @@
 
 This project demonstrates how to use Terraform to provision infrastructure on AWS. It sets up a basic environment including a VPC, subnets, security groups, ECS cluster, CodeCommit repository, CodePipeline, and CodeBuild project.
 
+## Overview
+
+The Terraform configuration in this project creates the following resources:
+
+- **Virtual Private Cloud (VPC):** A logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network.
+
+- **Subnets:** Subdivisions of the VPC's IP address range that can be used to group resources based on security and operational needs. This project creates public subnets in different availability zones.
+
+- **Internet Gateway:** A gateway that allows communication between instances in the VPC and the internet.
+
+- **Security Groups:** Virtual firewalls that control inbound and outbound traffic to AWS resources. Here, a security group is created to allow inbound traffic on port 80 (HTTP) from anywhere.
+
+- **ECS Cluster:** A logical grouping of ECS container instances. ECS (Elastic Container Service) is a fully managed container orchestration service provided by AWS.
+
+- **IAM Roles:** Identity and Access Management (IAM) roles for ECS service and CodePipeline, used to define permissions for AWS resources.
+
+- **CodeCommit Repository:** A source control repository hosted by AWS for storing and managing code.
+
+- **CodePipeline:** A continuous integration and continuous delivery (CI/CD) service that automates the build, test, and deployment phases of your release process.
+
+- **CodeBuild Project:** A fully managed build service that compiles source code, runs tests, and produces deployable software packages.
+
 ## Prerequisites
 
 Before you begin, ensure you have the following:
